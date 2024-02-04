@@ -139,7 +139,7 @@ function calcAge(birthYear) {
 
 const years = [1990, 1967, 2002, 2010, 2018];
 
-*/
+
 
 const friends = ["Michael", "Steven", "Peter"];
 const newLength = friends.push('Jay');
@@ -166,3 +166,56 @@ console.log(friends.includes(23));
 if (friends.includes('do')) {
     console.log(`You have a friend called Peter`);
 }
+
+
+const jonasArray = [
+    'Jonas',
+    'schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+console.log(jonasArray);
+*/
+const jonas = {
+    firstName : 'Jonas',
+    lastName : 'Schmedtmann',
+    age : 2037 - 1991,
+    job : 'teacher',
+    friends : ['Michael', 'Peter', 'Steven']
+}
+
+console.log(jonas);
+
+console.log(jonas.lastName);
+console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+
+// const interestedIn = prompt("What do you want to know about Jonas? choose between firstName, lastName, age, job, and friends");
+// console.log(interestedIn);
+
+// //console.log(jonas.interestedIn);
+
+
+// if(jonas[interestedIn]){
+//     console.log(jonas[interestedIn]);    
+// } else{
+//     console.log("Wrong request! Choose between firstName, lastName, age, and friends");
+// }
+
+jonas.location = "Portugal";
+jonas['twitter'] = "@jonasschmedtman";
+console.log(jonas);
+
+// Challenge
+// "Jonas has 3 friends, and his best friend is called Michael"
+
+const name = jonas['firstName'];
+const numberOfFriends = jonas['friends'].length;
+const bestFriend = jonas['friends'][0];
+
+console.log(`${name} has ${numberOfFriends} friends, and his best friend is called ${bestFriend}`);
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
