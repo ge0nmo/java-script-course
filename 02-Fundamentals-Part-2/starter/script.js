@@ -178,44 +178,176 @@ const jonasArray = [
 
 console.log(jonasArray);
 */
-const jonas = {
-    firstName : 'Jonas',
-    lastName : 'Schmedtmann',
-    age : 2037 - 1991,
-    job : 'teacher',
-    friends : ['Michael', 'Peter', 'Steven']
+// const jonas = {
+//     firstName : 'Jonas',
+//     lastName : 'Schmedtmann',
+//     age : 2037 - 1991,
+//     job : 'teacher',
+//     friends : ['Michael', 'Peter', 'Steven'],
+//     hasDriverLicense: true,
+//     birthYear: 1994,
+//     // calcAge: function(birthYear){
+//     //     return 2037 - birthYear;
+//     // }
+//     // calcAge: function(){
+//     //     return 2037 - this.birthYear;
+//     // }
+//     calcAge: function(){
+//         this.age = 2037 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function(){
+//         return `${this.firstName} is a ${this.calcAge()}-year old ${jonas.job}, and he has ${this.hasDriverLicense ? 'a' : 'no'} driver's license`
+//     }
+// };
+
+
+//console.log(jonas.getSummary());
+
+//console.log(jonas.calcAge());
+
+// console.log(jonas);
+
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
+
+// const nameKey = 'Name';
+// console.log(jonas['first' + nameKey]);
+
+// // const interestedIn = prompt("What do you want to know about Jonas? choose between firstName, lastName, age, job, and friends");
+// // console.log(interestedIn);
+
+// // //console.log(jonas.interestedIn);
+
+
+// // if(jonas[interestedIn]){
+// //     console.log(jonas[interestedIn]);    
+// // } else{
+// //     console.log("Wrong request! Choose between firstName, lastName, age, and friends");
+// // }
+
+// jonas.location = "Portugal";
+// jonas['twitter'] = "@jonasschmedtman";
+// console.log(jonas);
+
+// // Challenge
+// // "Jonas has 3 friends, and his best friend is called Michael"
+
+// const name = jonas['firstName'];
+// const numberOfFriends = jonas['friends'].length;
+// const bestFriend = jonas['friends'][0];
+
+// console.log(`${name} has ${numberOfFriends} friends, and his best friend is called ${bestFriend}`);
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+// console.log(jonas.age);
+
+// // Challenge
+// // "Jonas is a 46-year old teacher and he has a driver license"
+
+// console.log(jonas.getSummary());
+
+/*
+const mark = {
+    fullName: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+    },
+
 }
 
-console.log(jonas);
+const john = {
+    fullName: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+        this.bmi = this.mass / this.height ** 2;
+    }
+}
 
-console.log(jonas.lastName);
-console.log(jonas['lastName']);
+mark.calcBMI();
+console.log(mark.bmi);
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
+john.calcBMI();
+console.log(john.bmi);
 
-// const interestedIn = prompt("What do you want to know about Jonas? choose between firstName, lastName, age, job, and friends");
-// console.log(interestedIn);
+if(mark.bmi > john.bmi){
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`);
+} else{
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`);
+}
 
-// //console.log(jonas.interestedIn);
 
-
-// if(jonas[interestedIn]){
-//     console.log(jonas[interestedIn]);    
-// } else{
-//     console.log("Wrong request! Choose between firstName, lastName, age, and friends");
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetition ${rep}`)
 // }
 
-jonas.location = "Portugal";
-jonas['twitter'] = "@jonasschmedtman";
-console.log(jonas);
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+const types = [];
 
-// Challenge
-// "Jonas has 3 friends, and his best friend is called Michael"
+for(let i = 0; i < jonas.length; i++){
+    console.log(jonas[i], typeof jonas[i]);
 
-const name = jonas['firstName'];
-const numberOfFriends = jonas['friends'].length;
-const bestFriend = jonas['friends'][0];
+    types.push(typeof jonas[i]);
+}
 
-console.log(`${name} has ${numberOfFriends} friends, and his best friend is called ${bestFriend}`);
-console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for(let i = 0; i < years.length; i++){
+    ages.push(2024 - years[i]);
+}
+
+console.log(ages);
+*/
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037-1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+// for(let i = jonas.length - 1; i >= 0; i--){
+//     console.log(i, jonas[i]);
+// }
+
+// for(let exercise = 1; exercise < 4; exercise++){
+//     console.log(`---- Starting exercise ${exercise}`);
+
+//     for(let rep = 1; rep < 6; rep++){
+//         console.log(`Lifting weights repitition ${rep}`);
+//     }
+// }
+
+// let rep = jonas.length - 1;
+// while(rep >= 0){
+//     console.log(rep, jonas[rep]);
+//     rep--;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+}
